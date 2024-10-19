@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonUneven"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:backgroundTint="#E98F8F"
@@ -16,11 +16,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textReport"
         app:layout_constraintVertical_bias="0.085" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textReport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="83dp"
@@ -35,21 +35,21 @@
         app:layout_constraintVertical_bias="0.042" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonMissing"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:backgroundTint="#E9CA94"
         android:text="Sidewalk Missing"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonUneven"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.539"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/buttonUneven"
+        app:layout_constraintTop_toTopOf="@+id/buttonUneven"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonPoorly"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="19dp"
@@ -60,25 +60,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUneven"
         app:layout_constraintVertical_bias="0.17" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/buttonSignal"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:backgroundTint="#B1DEA6"
         android:text="Inaudible Traffic Signal"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/button4"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonPoorly"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.539"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toTopOf="@+id/button4"
+        app:layout_constraintStart_toEndOf="@+id/buttonPoorly"
+        app:layout_constraintTop_toTopOf="@+id/buttonPoorly"
         app:layout_constraintVertical_bias="0.17" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/buttonCurb"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:backgroundTint="#96CFED"
@@ -88,32 +88,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPoorly"
         app:layout_constraintVertical_bias="0.514" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/buttonDome"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:backgroundTint="#E4A484"
         android:text="No Dome Mat"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/button6"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCurb"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toTopOf="@+id/button6" />
+        app:layout_constraintStart_toEndOf="@+id/buttonCurb"
+        app:layout_constraintTop_toTopOf="@+id/buttonCurb" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/buttonExit"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:backgroundTint="#00FFFFFF"
         android:text="X"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/textReport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.656"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textReport"
+        app:layout_constraintTop_toTopOf="@+id/textReport"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

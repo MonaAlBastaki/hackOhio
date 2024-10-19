@@ -9,6 +9,9 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.LatLng
+import android.widget.Toast
+import android.widget.Button
+import android.content.Intent
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -22,6 +25,17 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map_container) as SupportMapFragment
         mapFragment.getMapAsync(this) // Set the callback for when the map is ready
+
+        // Find buttons by ID
+        val buttonReport = findViewById<Button>(R.id.button)
+
+        // Set onClick listeners
+        buttonReport.setOnClickListener {
+            //switch to the report page
+            val intent = Intent(this, ReportActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun onMapReady(googleMap: GoogleMap) {

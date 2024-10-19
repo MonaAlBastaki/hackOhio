@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "525150837657",
+    "project_id": "skibidi-426c4",
+    "storage_bucket": "skibidi-426c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525150837657:android:6dec1b318b7616b4765108",
+        "android_client_info": {
+          "package_name": "com.example.hackohio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4cF8tzC8MWheGg8bWAnrD01uBHAhlM8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
