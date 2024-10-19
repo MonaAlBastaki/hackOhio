@@ -1,47 +1,34 @@
 package com.example.hackohio
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.hackohio.ui.theme.HackOhioTheme
+import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.viewModels
+import androidx.fragment.app.FragmentActivity
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.model.LatLng
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity(), OnMapReadyCallback {
+
+    private lateinit var map: GoogleMap
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            HackOhioTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
+        setContentView(R.layout.activity_main) // Set the XML layout
+
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        val mapFragment = supportFragmentManager
+            .findFragmentById(R.id.map_container) as SupportMapFragment
+        mapFragment.getMapAsync(this) // Set the callback for when the map is ready
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+    override fun onMapReady(googleMap: GoogleMap) {
+        map = googleMap
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    HackOhioTheme {
-        Greeting("Android")
+        // Move the camera to a specified location (e.g., Latitude and Longitude for Ohio)
+        val ohio = LatLng(40.0, -83.0)
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(ohio, 10f)) // Zoom level of 10
     }
 }
