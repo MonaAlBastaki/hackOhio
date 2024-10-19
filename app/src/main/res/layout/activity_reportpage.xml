@@ -16,8 +16,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.085" />
 
     <TextView
         android:id="@+id/textView"
@@ -70,11 +70,11 @@
         android:backgroundTint="#B1DEA6"
         android:text="Inaudible Traffic Signal"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="@+id/button4"
         app:layout_constraintVertical_bias="0.17" />
 
     <Button
@@ -84,8 +84,12 @@
         android:backgroundTint="#96CFED"
         android:text="No Curb Cut"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="529dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="0.514" />
 
     <Button
         android:id="@+id/button7"
@@ -94,8 +98,10 @@
         android:backgroundTint="#E4A484"
         android:text="No Dome Mat"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="226dp"
-        tools:layout_editor_absoluteY="529dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toTopOf="@+id/button6" />
 
     <Button
         android:id="@+id/button8"
@@ -104,6 +110,10 @@
         android:backgroundTint="#00FFFFFF"
         android:text="X"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="316dp"
-        tools:layout_editor_absoluteY="25dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
