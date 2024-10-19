@@ -1,5 +1,3 @@
-package com.example.hackohio
-
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -7,11 +5,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.hackohio.ui.theme.HackOhioTheme
+import com.google.maps.android.compose.GoogleMap
+import com.google.maps.android.compose.rememberCameraPositionState
+import com.google.android.gms.maps.model.LatLng
+import com.google.maps.android.compose.CameraPositionState
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,9 +20,15 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             HackOhioTheme {
+                val cameraPositionState = rememberCameraPositionState {
+                    position = com.google.android.gms.maps.model.CameraPosition.fromLatLngZoom(
+                        LatLng(40.0, -83.0), // Example: Latitude and Longitude for Ohio
+                        10f
+                    )
+                }
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    MapScreen(
+                        cameraPositionState = cameraPositionState,
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -31,17 +38,20 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
+fun MapScreen(cameraPositionState: CameraPositionState, modifier: Modifier = Modifier) {
+    GoogleMap(
+        modifier = modifier.fillMaxSize(),
+        cameraPositionState = cameraPositionState
     )
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun MapScreenPreview() {
     HackOhioTheme {
-        Greeting("Android")
+        MapScreen(rememberCameraPositionState {
+            position = com.google.android.gms.maps.model.CameraPosition.fromLatLngZoom(
+                LatLng(40.0, -83.0), 10f)
+        })
     }
 }
