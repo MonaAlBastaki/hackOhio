@@ -7,25 +7,26 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#BFBFBF"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#E98F8F"
         android:text="Uneven Sidewalk"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.216" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="83dp"
-        android:text="Report Issues"
+        android:text="Report Issue"
         android:textColor="#050505"
-        android:textSize="24sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
@@ -35,54 +36,74 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#E9CA94"
         android:text="Sidewalk Missing"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toTopOf="@+id/button2"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginStart="19dp"
+        android:backgroundTint="#AC90E2"
         android:text="Poorly Lit"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintVertical_bias="0.17" />
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Inaudible Signal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#B1DEA6"
+        android:text="Inaudible Traffic Signal"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.17" />
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#96CFED"
         android:text="No Curb Cut"
+        android:textSize="24sp"
         tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="274dp" />
+        tools:layout_editor_absoluteY="529dp" />
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#E4A484"
         android:text="No Dome Mat"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="276dp" />
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="529dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#00FFFFFF"
+        android:text="X"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="316dp"
+        tools:layout_editor_absoluteY="25dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
