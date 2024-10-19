@@ -14,6 +14,12 @@ import com.google.maps.android.compose.GoogleMap
 import com.google.maps.android.compose.rememberCameraPositionState
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.compose.CameraPositionState
+import androidx.compose.runtime.*
+import kotlinx.coroutines.*
+import com.google.android.gms.maps.model.Polyline
+import android.util.Log
+import androidx.compose.ui.graphics.Color
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +34,22 @@ class MainActivity : ComponentActivity() {
                     )
                 }
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    var polylinePoints by remember { mutableStateOf<List<LatLng>>(emptyList()) }
+
+                    //get directions
+                    LaunchedEffect(Unit) {
+                        polylinePoints = getDirections(
+                            startLat = 40.0, startLng = -83.0, //example start
+                            endLat = 40.1, endLng = -83.1, //example end
+                            apiKey = "AIzaSyAqphgsGDdsPjz9_4DTAUWoWtg8irMsqRo" //API key
+
+                        )
+                        Log.d("PolylinePoints", polylinePoints.toString())
+                    }
+
                     MapScreen(
                         cameraPositionState = cameraPositionState,
+                        polylinePoints = polylinePoints,
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -39,11 +59,21 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MapScreen(cameraPositionState: CameraPositionState, modifier: Modifier = Modifier) {
+fun MapScreen(cameraPositionState: CameraPositionState,
+              polylinePoints: List<LatLng>,
+              modifier: Modifier = Modifier) {
     GoogleMap(
         modifier = modifier.fillMaxSize(),
         cameraPositionState = cameraPositionState
-    )
+    ) {
+        if (polylinePoints.isNotEmpty()) {
+            com.google.maps.android.compose.Polyline(
+                points = polylinePoints,
+                color = Color.Blue,
+                width = 5f
+            )
+        }
+    }
 }
 
 @Preview(showBackground = true)
@@ -53,6 +83,11 @@ fun MapScreenPreview() {
         MapScreen(rememberCameraPositionState {
             position = com.google.android.gms.maps.model.CameraPosition.fromLatLngZoom(
                 LatLng(40.0, -83.0), 10f)
-        })
+        },
+            polylinePoints = listOf(
+                LatLng(40.0, -83.0), //example point
+                LatLng(40.1, -83.1) //example point
+            )
+        )
     }
 }
