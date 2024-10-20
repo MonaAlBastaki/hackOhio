@@ -9,8 +9,8 @@
     <fragment
         android:id="@+id/map_container"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="318dp"
-        android:layout_height="408dp"
+        android:layout_width="319dp"
+        android:layout_height="605dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -21,7 +21,7 @@
     <Button
         android:id="@+id/button"
         android:layout_width="85dp"
-        android:layout_height="38dp"
+        android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:text="Report"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,6 +29,18 @@
         app:layout_constraintHorizontal_bias="0.141"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/map_container"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintVertical_bias="0.474" />
+
+    <Button
+        android:id="@+id/buttonIssues"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Issues"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.828"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

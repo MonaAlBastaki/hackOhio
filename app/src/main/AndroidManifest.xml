@@ -16,11 +16,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
-
+        <activity
+            android:name=".IssuesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_issues"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAqphgsGDdsPjz9_4DTAUWoWtg8irMsqRo"/>
+            android:value="AIzaSyAqphgsGDdsPjz9_4DTAUWoWtg8irMsqRo" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

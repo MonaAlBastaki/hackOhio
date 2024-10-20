@@ -9,7 +9,6 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.LatLng
-import android.widget.Toast
 import android.widget.Button
 import android.content.Intent
 
@@ -28,11 +27,18 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
         // Find buttons by ID
         val buttonReport = findViewById<Button>(R.id.button)
+        val buttonIssues = findViewById<Button>(R.id.buttonIssues)
 
         // Set onClick listeners
         buttonReport.setOnClickListener {
             //switch to the report page
             val intent = Intent(this, ReportActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonIssues.setOnClickListener {
+            //switch to the report page
+            val intent = Intent(this, IssuesActivity::class.java)
             startActivity(intent)
         }
 

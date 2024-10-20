@@ -2,19 +2,10 @@ package com.example.hackohio
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.activity.viewModels
-import androidx.fragment.app.FragmentActivity
-import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.model.LatLng
 import android.widget.Toast
 import android.widget.Button
 
 class ReportActivity : AppCompatActivity() {
-
-    private lateinit var map: GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +22,7 @@ class ReportActivity : AppCompatActivity() {
 
         // Set onClick listeners
         buttonUnevenSidewalk.setOnClickListener {
-            // Handle the action for the "Uneven Sidewalk" button
-            Toast.makeText(this, "Uneven Sidewalk Reported", Toast.LENGTH_SHORT).show()
+
         }
 
         buttonSidewalkMissing.setOnClickListener {
